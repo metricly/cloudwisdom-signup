@@ -84,8 +84,8 @@
             </div>
             <div>
               <form id="signupForm" action="https://app.metricly.com/signupAndProvision" onsubmit="addFields();" method="post">
+                <span class="small text-danger ml-2 d-none" id="nameError"></span>
                 <div class="form-row">
-                    <span class="small text-danger ml-2" id="nameError"></span>
                   <div class="form-group col-md-6">
                     <label for="firstName">First Name</label>
                     <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name">
@@ -162,6 +162,7 @@
     }
     if (params.error == 3) {
       document.getElementById("nameError").innerHTML = "(Please enter your first and last name)";
+      document.getElementById("nameError").classList.remove("d-none");
     }
     if (params.error == 4) {
       document.getElementById("captchaError").innerHTML = "Complete the captcha below. Disable ad-blocking if you aren't able to see it!";
