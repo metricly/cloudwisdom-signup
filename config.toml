@@ -1,0 +1,12 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Welcome To Metricly"
+theme = "metricly"
+staticDir = ["static"]
+[taxonomies]
+  author = "author"
+  category = "category"
+  tag = "tags"
+metaDataFormat = "yaml"
+[outputs]
+  home = ["HTML", "JSON"]

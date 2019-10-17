@@ -1,0 +1,212 @@
+---
+
+---
+<style>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  body {
+    font-family: "Muli", sans-serif;
+  }
+
+  button {
+    background: #47C647;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  label {
+    font-size: 11px;
+    font-weight: 900 !important;
+    color: #A5A5A5;
+    margin-bottom: 4px;
+  }
+
+  .form-control {
+    height: 45px;
+    padding: .475rem .75rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+  }
+
+  .form-group {
+    margin-bottom: 4px;
+  }
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<section>
+  <div class="container">
+
+  </div>
+</section>
+
+<section style="background: url(/img/login-bg.jpg) no-repeat; background-size: cover;">
+  <div class="container pt-md pt-lg-lg pb-sm">
+    <div class="row pt-4">
+      <div class="col-12 justify-content-between d-flex">
+          <svg width="132px" height="26px" viewBox="0 0 138 26" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient x1="6.332%" y1="27.758%" x2="82.444%" y2="55.631%" id="a">
+                <stop stop-color="#FFE600" offset="0%"></stop>
+                <stop stop-color="#47C647" offset="50%"></stop>
+                <stop stop-color="#1E97BC" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <g fill-rule="nonzero" fill="none">
+              <path
+                d="M71.11 6.281c-1.081-.27-2.186-.409-3.299-.409-3.908 0-6.04 2.21-6.04 5.889v12.518c0 1.375 0 1.375 1.539 1.375 1.538 0 1.481 0 1.481-1.375V12.113c0-2.34 1.076-3.274 3.225-3.274.654-.004 1.31.07 1.948.221.351.11.716.18 1.084.217.389 0 .487-.2.86-1.121.159-.315.282-.651.36-.995 0-.458-.602-.712-1.159-.88zM57.225 6.208c-1.482 0-1.482 0-1.482 1.522v16.528c0 1.396 0 1.396 1.482 1.396 1.481 0 1.518 0 1.518-1.396V7.73c0-1.522 0-1.522-1.518-1.522zM57.225.205c-1.76 0-1.76 0-1.76 1.763 0 1.838 0 1.838 1.76 1.838s1.796 0 1.796-1.838c0-1.763 0-1.763-1.796-1.763zM129.873 5.872c-1.96.033-3.892.446-5.688 1.228-.573.241-.741.41-.741.671.061.401.192.794.389 1.15.372.876.54.986.818 1.002.32-.053.634-.15.925-.294 1.359-.585 2.82-.9 4.297-.93 3.171 0 4.579 1.298 4.579 4.29v1.538a17.972 17.972 0 0 0-5.19-.777c-4.91 0-7.32 2.709-7.32 6.031 0 3.683 2.455 6.204 7.32 6.204 3.798 0 6.524-1.297 7.522-2.021.557-.41.614-.52.614-1.228v-9.915c0-4.886-2.631-6.949-7.525-6.949zm4.579 15.96a9.085 9.085 0 0 1-4.874 1.465c-3.15 0-4.726-1.26-4.726-3.528 0-1.989 1.485-3.49 4.706-3.49 1.67.036 3.322.31 4.91.818l-.016 4.735zM111.896 5.872c-3.855 0-6.507 1.228-7.579 2.01a1.367 1.367 0 0 0-.63 1.317v15.06c0 1.395 0 1.395 1.502 1.395s1.498 0 1.498-1.396V10.144a10.305 10.305 0 0 1 5.115-1.297c2.721 0 4.947 1.486 4.947 4.825v10.586c0 1.396 0 1.396 1.502 1.396s1.498 0 1.498-1.396V13.545c0-4.866-2.668-7.673-7.853-7.673zM93.506 5.872c-1.96.029-3.892.446-5.688 1.228-.577.241-.741.41-.741.671.061.405.192.794.389 1.15.368.876.536.986.818 1.002.323-.049.634-.15.925-.294a11.489 11.489 0 0 1 4.297-.913c3.167 0 4.575 1.297 4.575 4.289v1.522a17.972 17.972 0 0 0-5.19-.777c-4.91 0-7.316 2.709-7.316 6.031 0 3.683 2.455 6.204 7.317 6.204 3.801 0 6.523-1.297 7.525-2.021.553-.41.61-.52.61-1.228v-9.915c0-4.886-2.631-6.949-7.521-6.949zm4.575 15.96a9.05 9.05 0 0 1-4.874 1.465c-3.147 0-4.722-1.26-4.722-3.528 0-1.989 1.481-3.49 4.706-3.49 1.661.036 3.306.315 4.89.818v4.735zM83.439 22.364a2.435 2.435 0 0 0-.74.167 7.548 7.548 0 0 1-2.865.557c-2.046 0-2.93-1.26-2.93-3.155V9.068h5.524c1.482 0 1.482 0 1.482-1.391s0-1.47-1.482-1.47h-5.524V3.11c0-1.596 0-1.596-1.535-1.596-1.534 0-1.465 0-1.465 1.596v16.712c0 3.507 1.707 6.163 5.652 6.163a10.681 10.681 0 0 0 4.223-.818c.483-.205.798-.41.798-.704 0-.131 0-.225-.315-1.023-.316-.798-.434-1.076-.823-1.076zM51.741 6.45a4.775 4.775 0 0 0-1.166-.316c-.352 0-.462.184-.65.798l-6.262 15.432c-.057.143-.04.16-.065.16s0 0-.062-.16L37.24 6.957c-.205-.594-.332-.856-.667-.856a5.426 5.426 0 0 0-1.187.3c-1.02.351-1.228.462-1.228.76.066.377.172.745.315 1.097l6.65 16.25c.41 1.133.41 1.133 2.455 1.133 2.046 0 2.046 0 2.48-1.133L52.67 8.274c.143-.331.242-.683.295-1.04-.02-.302-.176-.412-1.224-.785z"
+                fill="#FFF"></path>
+              <path
+                d="M25.973 3.802l-8.549 21.074c-.331.512-.9.823-1.51.819h-5.729a1.078 1.078 0 0 1-1.01-1.146 1.077 1.077 0 0 1 1.01-1.01h3.004a1.105 1.105 0 0 0 0-2.21H8.454a1.123 1.123 0 0 1-1.19-1.056 1.123 1.123 0 0 1 1.19-1.191h6.593a1.101 1.101 0 0 0 0-2.202H10.03a1.122 1.122 0 1 1 0-2.238h.855a1.104 1.104 0 0 0 0-2.206h-6.06a1.113 1.113 0 1 1 0-2.222h9.67a1.104 1.104 0 0 0 0-2.206h-2.742a1.117 1.117 0 1 1 0-2.23h4.562a1.104 1.104 0 1 0 .135-2.206.744.744 0 0 0-.135 0H14.38a1.095 1.095 0 0 1-1.027-1.162 1.095 1.095 0 0 1 1.027-1.027h10.435c1.268.017 1.784.999 1.158 2.419zM8.025 15.775a1.114 1.114 0 0 0-1.11-1.117H6.63a1.12 1.12 0 0 0-1.047 1.183 1.114 1.114 0 0 0 1.047 1.047h.283c.613 0 1.113-.499 1.113-1.113zm1.718-8.872a1.114 1.114 0 0 0-1.109-1.117H3.028A1.12 1.12 0 0 0 1.981 6.97a1.114 1.114 0 0 0 1.047 1.048H8.63c.614 0 1.113-.5 1.113-1.114zm-.94-3.314h1.636a1.095 1.095 0 0 0 1.162-1.027A1.095 1.095 0 0 0 10.44 1.4H8.802A1.095 1.095 0 0 0 7.64 2.427a1.095 1.095 0 0 0 1.162 1.162zM6.821 2.496A1.095 1.095 0 0 0 5.733 1.4H1.195A1.095 1.095 0 0 0 .033 2.427a1.095 1.095 0 0 0 1.162 1.162h4.534c.602 0 1.093-.491 1.093-1.093z"
+                fill="url(#a)"></path>
+            </g>
+          </svg>
+          <p class="text-white">Already a user? <a href="" class="text-white">Login</a></p>
+      </div>
+    </div>
+
+    <div class="d-flex w-100 justify-content-center mt-5">
+      <div>
+        <div class="col-12 col-md-7 p-4 p-sm-5 pb-3 bg-white rounded shadow" style="max-width: 500px;">
+          <div class="account-box">
+            <div class="text-center mb-3">
+              <img src="/img/cloudwisdom.png" alt="CloudWisdom" style="max-width: 200px;">
+              <h6 class="h5 mt-3">Start a free 21-day trial</h6>
+            </div>
+            <div>
+              <form id="signupForm" action="https://app.metricly.com/signupAndProvision" onsubmit="addFields();" method="post">
+                <div class="form-row">
+                    <span class="small text-danger ml-2" id="nameError"></span>
+                  <div class="form-group col-md-6">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Work Email * <span class="text-danger ml-2" id="emailError"></span></label>
+                  <input type="email" id="email" name="email" placeholder="Work Email" class="form-control"
+                    autocomplete="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="company">Company * <span class="text-danger ml-2" id="companyError"></span></label>
+                  <input type="text" id="company" name="company" placeholder="Company" class="form-control"
+                    autocomplete="company" required>
+                  <div id="emailError" style="font-size: small; color: red;"></div>
+                </div>
+                <div class="form-group mb-0">
+                  <label for="password">Password *</label>
+                  <div class="cb-company-name">
+                    <input id="password" name="password" class="form-control" autocomplete="off" type="password"
+                      style="letter-spacing: 3px; font-weight: bold;">
+                    <input type="hidden" id="phone" maxlength="40" name="phone" size="40" type="text" required />
+                  </div>
+                </div>
+                <div id="captchaError" style="font-size: small; color: red;"></div>
+                <span class="text-danger ml-2" id="captchaError"></span>
+                <div class="g-recaptcha" data-sitekey="6LfWlTcUAAAAAABM43kjq03tyYQxNmFCeX-t08rW"></div>
+                <div class="mt-4">
+                  <button type="submit" style="width: 100%;">Create Free Account</button>
+                </div>
+              </form>
+            </div>
+            <div class="mt-4 text-center">
+              <p class="small" style="max-width: 300px; margin: 0 auto;">By creating a CloudWisdom account you are
+                agreeing to the <a href="/legal/terms-service-trial/" class="text-darkblue">terms and conditions.</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 d-flex justify-content-between">
+          <p class="small text-white">© 2019 Virtana Inc. All rights reserved.</p>
+          <div class="small text-white">
+              <a href="https://www.metricly.com/legal/" target="_blank" class="text-white">Terms of Use</a>
+               |
+              <a href="mailto:support@metricly.com?Subject=Help%20%26%20Information%20About%20Signing%20up%20for%20Metricly" target="_top" class="text-white">Support</a>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script> document.getElementById("companyError").innerHTML = "";
+  document.getElementById("emailError").innerHTML = "";
+  var queryStr = window.location.search;
+  var paramPairs = queryStr.substr(1).split('&');
+  var params = {};
+  for (var i = 0; i < paramPairs.length; i++) {
+    var parts = paramPairs[i].split('=');
+    params[parts[0]] = parts[1];
+  }
+  if (params.error) {
+    if (params.error == 1) {
+      document.getElementById("companyError").innerHTML = "(Whoops, that company name is taken!)";
+    }
+    if (params.error == 2) {
+      document.getElementById("emailError").innerHTML = "(An account with that email already exists)";
+    }
+    if (params.error == 3) {
+      document.getElementById("nameError").innerHTML = "(Please enter your first and last name)";
+    }
+    if (params.error == 4) {
+      document.getElementById("captchaError").innerHTML = "Complete the captcha below. Disable ad-blocking if you aren't able to see it!";
+    }
+    if (params.error == 5) {
+      alert("There was an error submitting the form. If it persists, please chat with us.");
+    }
+  }
+
+  function addFields() {
+    var form = document.getElementById("signupForm");
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "fullName";
+    input.value = document.getElementById("firstName").value + " " + document.getElementById("lastName").value;
+    form.appendChild(input);
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "utmCampaign";
+    input.value = getCookie('utm_campaign');
+    form.appendChild(input);
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "utmKeyword";
+    input.value = getCookie('utm_keyword');
+    form.appendChild(input);
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "utmMedium";
+    input.value = getCookie('utm_medium');
+    form.appendChild(input);
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "utmSource";
+    input.value = getCookie('utm_source');
+    form.appendChild(input);
+    var input = document.createElement("input");
+    input.hidden = "true";
+    input.type = "text";
+    input.name = "fullStorySessionUrl";
+    input.value = FS ? FS.getCurrentSessionURL() : '';
+    form.appendChild(input);
+  } </script>
