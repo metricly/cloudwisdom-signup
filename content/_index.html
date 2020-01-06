@@ -42,6 +42,23 @@
     margin-bottom: 4px;
   }
 </style>
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Signup Error</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<p id="errorMessage">Unfortunately in order to comply with US laws and regulations, we don’t allow sign-ups from your location. Please <a href="#" onclick="Intercom('showNewMessage', 'I'm having trouble signing up');">chat with us</a> for more details.</p>
+</div>
+      
+    </div>
+  </div>
+</div>
+
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <section>
   <div class="container">
@@ -143,71 +160,3 @@
     </div>
   </div>
 </section>
-
-<script> document.getElementById("companyError").innerHTML = "";
-  document.getElementById("emailError").innerHTML = "";
-  var queryStr = window.location.search;
-  var paramPairs = queryStr.substr(1).split('&');
-  var params = {};
-  for (var i = 0; i < paramPairs.length; i++) {
-    var parts = paramPairs[i].split('=');
-    params[parts[0]] = parts[1];
-  }
-  if (params.error) {
-    if (params.error == 1) {
-      document.getElementById("companyError").innerHTML = "(Whoops, that company name is taken!)";
-    }
-    if (params.error == 2) {
-      document.getElementById("emailError").innerHTML = "(An account with that email already exists)";
-    }
-    if (params.error == 3) {
-      document.getElementById("nameError").innerHTML = "(Please enter your first and last name)";
-      document.getElementById("nameError").classList.remove("d-none");
-    }
-    if (params.error == 4) {
-      document.getElementById("captchaError").innerHTML = "Complete the captcha below. Disable ad-blocking if you aren't able to see it!";
-    }
-    if (params.error == 5) {
-      alert("There was an error submitting the form. If it persists, please chat with us.");
-    }
-  }
-
-  function addFields() {
-    var form = document.getElementById("signupForm");
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "fullName";
-    input.value = document.getElementById("firstName").value + " " + document.getElementById("lastName").value;
-    form.appendChild(input);
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "utmCampaign";
-    input.value = getCookie('utm_campaign');
-    form.appendChild(input);
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "utmKeyword";
-    input.value = getCookie('utm_keyword');
-    form.appendChild(input);
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "utmMedium";
-    input.value = getCookie('utm_medium');
-    form.appendChild(input);
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "utmSource";
-    input.value = getCookie('utm_source');
-    form.appendChild(input);
-    var input = document.createElement("input");
-    input.hidden = "true";
-    input.type = "text";
-    input.name = "fullStorySessionUrl";
-    input.value = FS ? FS.getCurrentSessionURL() : '';
-    form.appendChild(input);
-  } </script>
