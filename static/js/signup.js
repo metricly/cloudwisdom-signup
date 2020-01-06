@@ -26,7 +26,7 @@ document.getElementById("companyError").innerHTML = "";
       $('#errorModal').modal('show');
     }
     if (params.error == 6) {
-      $('#errorMessage').html('Unfortunately in order to comply with US laws and regulations, we don’t allow sign-ups from your location. Please <a href="#" onclick="Intercom("showNewMessage", "I\'m having trouble signing up");">chat with us</a> for more help.');
+      $('#errorMessage').html('Unfortunately in order to comply with US laws and regulations, we don’t allow sign-ups from your location.');
       $('#errorModal').modal('show');
     }
   }
