@@ -32,6 +32,21 @@ document.getElementById("companyError").innerHTML = "";
   }
 
   function addFields() {
+    // Fire Google Ads conversion tag
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-973191113/eWu6CIHM2LsBEMnvhtAD',
+          'event_callback': callback
+      });
+      return false;
+    }
+
+    // Fill out the form details
     var form = document.getElementById("signupForm");
     var input = document.createElement("input");
     input.hidden = "true";
