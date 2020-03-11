@@ -29,6 +29,10 @@ document.getElementById("companyError").innerHTML = "";
       $('#errorMessage').html('Unfortunately in order to comply with US laws and regulations, we don’t allow sign-ups from your location.');
       $('#errorModal').modal('show');
     }
+    if (params.error == 7) {
+      $('#errorMessage').html('Password must be at least 8 charactes');
+      $('#errorModal').modal('show');
+    }
   }
 
   function addFields() {
