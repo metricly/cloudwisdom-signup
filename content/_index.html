@@ -131,9 +131,9 @@
                 <div class="form-group mb-0">
                   <label for="password">Password *</label>
                   <div class="cb-company-name">
-                    <input id="password" name="password" class="form-control" autocomplete="off" type="password"
-                      style="letter-spacing: 3px; font-weight: bold;">
-                    <input type="hidden" id="phone" maxlength="40" name="phone" size="40" type="text" required />
+                    <input id="password" name="password" minlength="8" class="form-control" autocomplete="off" type="password"
+                      style="letter-spacing: 3px; font-weight: bold;" required>
+                    <input type="hidden" id="phone" minlength="40" maxlength="40" name="phone" size="40" type="text" required />
                   </div>
                 </div>
                 <div id="captchaError" style="font-size: small; color: red;"></div>
